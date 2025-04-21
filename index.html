@@ -41,6 +41,35 @@
       </div>
     </div>
   </nav>
+
+
+
+
+
+  
+<!--   <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              StyleMe3D: Stylization with Disentangled Priors by Multiple Encoders on 3D Gaussians
+            </h1>
+            添加xxxx 2025字样
+            <p class="is-size-4 has-text-weight-bold has-text-centered">Reference-based 3D Stylization</p>
+            <div class="is-size-5 publication-authors has-text-centered">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section> -->
+
+
+
+
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -57,8 +86,9 @@
         </div>
       </div>
     </div>
-    </div>
+    
   </section>
+
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
@@ -67,10 +97,14 @@
         <h2 class="subtitle has-text-centered">
           <span class="dnerf">StyleMe3D</span> enables versatile, high-quality 3D stylization across diverse styles.
         </h2>
-        <video  autoplay muted loop playsinline height="100%" src="./static/videos/face_vangogh_wheat_field.webm"
-          style="border-radius: 10px;"></video>
+        <div style="display: flex; justify-content: center; gap: 10px;">
+          <video  autoplay muted loop playsinline height="100%" src="./static/videos/face_vangogh_wheat_field.webm"
+            style="border-radius: 10px; width: 48%;"></video>
+          <video  autoplay muted loop playsinline height="100%" src="./static/videos/2025-04-12_101625.mp4"
+            style="border-radius: 10px; width: 48%;"></video>
+        </div>
         <h2 class="subtitle has-text-centered">
-          <span class="dnerf">StyleMe3D</span>StyleMe3D supports multi-level style alignment at the semantic level, as well as scene-level style transfer.
+          <span class="dnerf">StyleMe3D</span> supports multi-level style alignment at the semantic level, as well as scene-level style transfer.
         </h2>
       </div>
     </div>
@@ -90,27 +124,48 @@
       });
     });
   </script>
+
+
+
+
+
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
+        
         <!-- 图片展示 -->
-        <div id="results-grid" class="columns is-centered is-multiline">
-          <div class="column is-one-third">
-            <figure class="image">
-              <img src="./static/images/more_result_chair.png" alt="Chair Image" class="result-image">
-            </figure>
-          </div>
-          <div class="column is-one-third">
-            <figure class="image">
-              <img src="./static/images/more_result_hotdog.png" alt="Hotdog Image" class="result-image">
-            </figure>
-          </div>
-          <div class="column is-one-third">
-            <figure class="image">
-              <img src="./static/images/more_result_mic.png" alt="Mic Image" class="result-image">
-            </figure>
-          </div>
+        <div class="result-image-list">
+<!--         <div id="results-grid" class="columns is-centered is-multiline"> -->
+<!--           <div class="column is-one-third"> -->
+<!--             <figure class="image"> -->
+              <img src="./static/images/teaser_grid_chair.png" alt="Chair Image" class="result-image">
+<!--             </figure> -->
+<!--           </div> -->
+<!--           <div class="column is-one-third"> -->
+<!--             <figure class="image"> -->
+              <img src="./static/images/teaser_grid_hotdog.png" alt="Hotdog Image" class="result-image">
+<!--             </figure> -->
+<!--           </div> -->
+<!--           <div class="column is-one-third"> -->
+<!--             <figure class="image"> -->
+              <img src="./static/images/teaser_grid_mic.png" alt="Mic Image" class="result-image">
+<!--             </figure> -->
+<!--           </div> -->
+<!--         </div> -->
         </div>
+
+        <style>
+          .result-image {
+            width: auto; /* 宽度自动，保持图片比例 */
+            height: 350px; /* 设置图片高度 */
+          }
+          .result-image-list {
+            display: flex; /* 图片横向排列 */
+            justify-content: center; /* 居中对齐 */
+            gap: 10px; /* 图片之间的间距 */
+          }
+        </style>
+        
       </div>
     </div>
   </section>
@@ -153,7 +208,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Overview of Our Method</h2>
           <figure class="image is-centered">
-            <img src="./static/images/styleme3d_pipeline.png" alt="Method Pipeline Illustration">
+            <img src="./static/images/styleme3d_pipeline.jpg" alt="Method Pipeline Illustration">
           </figure>
           <div class="content has-text-justified">
             <p>
@@ -183,6 +238,32 @@
       <!--/ Method. -->
     </div>
   </section>
+    <!-- Video Comparison Section -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Video Comparisons</h2>
+  
+        <div class="tabs is-centered is-boxed">
+          <ul id="style-tabs">
+            <li class="is-active" data-style="vangogh_wheat_field"><a>Van Gogh Wheat Field</a></li>
+            <li data-style="colorful"><a>Colorful</a></li>
+            <li data-style="landscape"><a>Landscape</a></li>
+            <li data-style="nezha"><a>Nezha</a></li>
+            <li data-style="tigger"><a>Tiger</a></li>
+            <li data-style="street"><a>Street</a></li>
+            <li data-style="stick"><a>Stick</a></li>
+            <li data-style="sketch"><a>Sketch</a></li>
+            <li data-style="star_night"><a>Starry Night</a></li>
+            <li data-style="cloud"><a>Cloud</a></li>
+            <li data-style="vangogh_like"><a>Van Gogh Like</a></li>
+          </ul>
+        </div>
+  
+        <div id="video-comparison-content">
+          <!-- Video content will be loaded here by JavaScript -->
+        </div>
+      </div>
+    </section>
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Experiment. -->
@@ -285,7 +366,106 @@
     </div>
   </section>
 
-  <!-- </section> -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const styleTabs = document.getElementById('style-tabs');
+      const videoContent = document.getElementById('video-comparison-content');
+      const styles = [
+        { id: 'vangogh_wheat_field', name: 'Van Gogh Wheat Field' },
+        { id: 'colorful', name: 'Colorful' },
+        { id: 'landscape', name: 'Landscape' },
+        { id: 'nezha', name: 'Nezha' },
+        { id: 'tigger', name: 'Tiger' },
+        { id: 'street', name: 'Street' },
+        { id: 'stick', name: 'Stick' },
+        { id: 'sketch', name: 'Sketch' },
+        { id: 'star_night', name: 'Starry Night' },
+        { id: 'cloud', name: 'Cloud' },
+        { id: 'vangogh_like', name: 'Van Gogh Like' },
+      ];
+      const objects = ["chair", "drums", "hotdog", "lego", "mic", "ship"];
+      const methods = [
+        { name: "Ours", dir: "our_render_video" },
+        { name: "ARF", dir: "arf_render_video" },
+        { name: "SGSST", dir: "sgsst_render_video" },
+        { name: "StyleGaussian", dir: "stylegaussian_render_video" }
+      ];
+
+      function generateVideoHTML(styleId) {
+        let html = '';
+        // Add style reference image
+        const styleImageSrc = `./static/images/style_image/${styleId}.jpg`;
+        html += `
+          <div class="columns is-centered">
+            <div class="column is-half has-text-centered">
+              <h4 class="title is-4">Style Reference</h4>
+              <figure class="image is-inline-block" style="max-width: 400px;">
+                 <img src="${styleImageSrc}" alt="Style: ${styleId}" style="border-radius: 5px;">
+              </figure>
+            </div>
+          </div>
+          <hr>
+        `;
+
+        methods.forEach(method => {
+          html += `<h4 class="title is-4 mt-5">${method.name}</h4>`;
+          html += '<div class="columns is-multiline is-mobile">';
+          objects.forEach(object => {
+            if (method.name == 'Ours') {
+              const videoSrc = `./static/videos/${method.dir}/${object}_${styleId}.webm`;
+              html += `
+                <div class="column is-one-third-tablet is-half-mobile has-text-centered">
+                  <p class="is-size-6 mb-1">${object.charAt(0).toUpperCase() + object.slice(1)}</p>
+                  <video autoplay muted loop playsinline style="width: 100%; height: auto; border-radius: 5px;">
+                    <source src="${videoSrc}" type="video/webm">
+                    <!-- <source src="" type="video/mp4" > -->
+                    Your browser does not support the video tag.
+                  </video>
+                </div>`;
+            } else {
+              const videoSrc = `./static/videos/${method.dir}/${object}_${styleId}.mp4`;
+              html += `
+                <div class="column is-one-third-tablet is-half-mobile has-text-centered">
+                  <p class="is-size-6 mb-1">${object.charAt(0).toUpperCase() + object.slice(1)}</p>
+                  <video autoplay muted loop playsinline style="width: 100%; height: auto; border-radius: 5px;">
+                    <source src="${videoSrc}" type="video/webm">
+                    <!-- <source src="" type="video/mp4"> -->
+                    Your browser does not support the video tag.
+                  </video>
+                </div>`;
+            }
+          });
+          html += '</div>';
+        });
+        return html;
+      }
+
+      function updateVideoContent(styleId) {
+        videoContent.innerHTML = generateVideoHTML(styleId);
+      }
+
+      styleTabs.addEventListener('click', (event) => {
+        const targetTab = event.target.closest('li');
+        if (targetTab && !targetTab.classList.contains('is-active')) {
+          // Remove active class from previously active tab
+          styleTabs.querySelector('.is-active').classList.remove('is-active');
+          // Add active class to clicked tab
+          targetTab.classList.add('is-active');
+          // Update video content
+          const styleId = targetTab.getAttribute('data-style');
+          updateVideoContent(styleId);
+        }
+      });
+
+      // Initial load for the default active tab
+      const initialStyleId = styleTabs.querySelector('.is-active').getAttribute('data-style');
+      updateVideoContent(initialStyleId);
+    });
+  </script>
+  <!-- End Video Comparison Section -->
+
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Overall Title -->
@@ -364,8 +544,8 @@
       <!--/ Related Work. -->
     </div>
   </section>
-  <section class="section">
-    <!-- Animation. -->
+  
+  <!-- <section class="section">
     <div class="columns is-centered">
       <div class="column is-full-width">
 
@@ -373,7 +553,8 @@
     </div>
 
     </div>
-  </section>
+  </section> -->
+
 
   <footer class="footer">
     <div class="container">
